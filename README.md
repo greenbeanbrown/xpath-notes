@@ -62,11 +62,20 @@ The above example will locate the 'Free Sign Up' button from the example site
 ```//tagname[@attribute1=value1 OR @attribute2=value1]```
 ```//tagname[@attribute1=value1 AND @attribute2=value1]```
 
-
-
 ### **XPath using Text()**
 The text() method is used in XPath whenever we want to locate an element using text defined within an HTML tag
 	- This is mostly useful if the HTML structure changes dynamically, but the text does not 
 
 **Syntax**
 ```//tagname[text()=’Text of the Web Element’]```
+
+
+### **Capturing XPath within a specific section of XPath**
+If using selenium, you can capture <u>only</u> elements within the web element you are located within
+	- If you don't use the ```.//``` here, you will just end up locating ALL the elements that match the XPath within the entire HTML DOM
+
+**Syntax**
+```.//```
+
+**Example** 
+```.//span[@class='odds-cell__line']``` (This is not from the lambdatest.com example)
